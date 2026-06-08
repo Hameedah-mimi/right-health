@@ -24,3 +24,5 @@ def service(request):
 
 def testimonial(request):
     return render(request, 'testimonial.html')
+def error(request):
+     return render (request, '404.html')
