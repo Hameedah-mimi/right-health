@@ -56,11 +56,13 @@
             the files, add a little code and you're done.
             <a href="https://htmlcodex.com/contact-form">Download Now</a>.
           </p>
-          <form>
+          <form action="#" method="post">
+            {% csrf_token %}
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
                   <input
+                    name="full_name"
                     type="text"
                     class="form-control"
                     id="name"
@@ -72,6 +74,7 @@
               <div class="col-md-6">
                 <div class="form-floating">
                   <input
+                    name="email"
                     type="email"
                     class="form-control"
                     id="email"
@@ -83,6 +86,7 @@
               <div class="col-12">
                 <div class="form-floating">
                   <input
+                    name="subject"
                     type="text"
                     class="form-control"
                     id="subject"
@@ -94,6 +98,7 @@
               <div class="col-12">
                 <div class="form-floating">
                   <textarea
+                    name="message"
                     class="form-control"
                     placeholder="Leave a message here"
                     id="message"
